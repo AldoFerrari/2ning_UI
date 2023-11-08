@@ -1,0 +1,13 @@
+{% import "templating/content/banners/banners.html" as banner %}
+  
+{{ banner.banrs(banner=1) }}
+<footer class="footer mt-auto py-3 bg-body-tertiary border-top shadow-sm"> 
+  <div class="container-xxl">
+    <!--   -->
+    {% include "templating/footer-pieces/block1.html" %}
+    <!--   -->
+    {% include "templating/footer-pieces/block2.html" %}
+    <!--   -->
+    {% include "templating/footer-pieces/block3.html" %}
+  </div>
+</footer>

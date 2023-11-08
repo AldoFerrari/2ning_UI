@@ -1,0 +1,64 @@
+ /** start SCROLLBAR */
+/** width */
+::-webkit-scrollbar {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  z-index: 1050;  
+ 
+}
+ 
+
+/* buttons 
+body::-webkit-scrollbar-button {
+  border-radius: 50%;
+ 
+  height: 14px;
+  width: 14px;
+  border: 1px solid #FAFAFA;
+  background-color: red;
+  
+}*/
+
+::-webkit-scrollbar-button:hover {
+  //background-color: #B69F6C;
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+ /* border-right:2px solid red;
+margin-right: 2px; 
+padding-right: 2px;
+*/
+}
+
+/* Track hover */
+::-webkit-scrollbar-track:hover {
+  cursor: grab;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  //border: 2px solid #FAFAFA;
+  //border-left: 1px solid #FAFAFA;
+  background: #ccc;
+
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+  cursor: grab;
+}
+
+::-webkit-scrollbar-corner {
+  background: #ccc;
+}
+ 
+
+/** end SCROLLBAR */

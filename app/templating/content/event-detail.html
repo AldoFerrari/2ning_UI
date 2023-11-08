@@ -1,0 +1,287 @@
+{% import "templating/content/banners/banners.html" as banner %}
+<div class="container-xxl ">
+  <nav aria-label="breadcrumb" id="gototop">
+    <ol class="breadcrumb breadcrumb-chevron  bg-body-light  border-bottom py-1  mb-1">
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis" href="index.html">
+          Home
+          <span class="visually-hidden">Home</span>
+        </a>
+      </li>
+
+      <li class="breadcrumb-item active" aria-current="page">
+        <a class="link-body-emphasis" href="./events.html"> Events </a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Title of the specific event!
+      </li>
+    </ol>
+  </nav>
+</div>
+
+<div class="demo-wrap   ">
+
+  <img class="demo-bg " src="{{path}}images/unsplash-photo-2.jpg" alt="">
+  <div class="ribbon ribbon-top-right "><span class="bg-warning">featured</span></div>
+
+
+  <div class="demo-content align-self-end  ">
+    <div class="container-xxl d-flex  text-white  p-4">
+      <div class=" col-sm-12 col-md-8   ">
+        <!-- left -->
+        <h1 class="display-6 fst-italic">Title of the specific event! </h1>
+        <p> start: <span class=" fst-italic  "> Tue, 17 Oct 2023, from 18:00</span>
+          <br> end:<span class=" fst-italic  "> Tue, 17 Oct 2023, from 18:00</span>
+        </p>
+        <ul class="d-flex list-unstyled mt-auto h4 ">
+          <li class="d-flex align-items-center me-1  ">
+            <i class="bi bi-geo-fill"></i>
+            <small> Lombardia, italia</small>
+          </li>
+        </ul>
+        <!--   -->
+      </div>
+
+      <div class=" col-sm-12 col-md-4  align-self-end ">
+        <!-- right -->
+        <div class=" ">
+          <button type="button" class="btn btn-lg btn-outline-light mb-1 p-0 m-0  " data-bs-toggle="tooltip"
+            data-bs-placement="left" data-bs-title="go to this event">
+            <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#exampleModalToggle"><i class="bi-cursor"></i>
+              going
+            </div>
+          </button>
+
+
+        </div>
+
+
+
+        <p class="d-flex align-items-center mb-0 ">
+          <i class="bi bi-calendar3 me-1"></i>
+          <small> 2 days duration</small>
+        </p>
+        <p class="d-flex align-items-center  mb-2  ">
+          <i class="bi bi-calendar3 me-1"></i>
+          <small>event start in 3day, 20 huors </small>
+        </p>
+
+        <div>
+          <button type="button" class="btn btn-sm btn-outline-light mb-1 p-0 m-0" data-bs-toggle="tooltip"
+            data-bs-placement="top" data-bs-title="like">
+            <div class=" p-1 m-0"><i class="bi-hand-thumbs-up"></i>
+              like</div>
+          </button>
+
+          <button type="button" class="position-relative btn btn-sm btn-outline-light mb-1 p-0 m-0"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="favorite">
+            <div class=" p-1 m-0"> <i class="bi-star"></i>
+              favorite
+            </div>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+              99+
+              <span class="visually-hidden">favorite the event</span>
+            </span>
+          </button>
+
+
+          <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0  " data-bs-toggle="tooltip"
+            data-bs-placement="top" data-bs-title="share this event">
+            <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#shareLink"><i class="bi bi-share"></i>
+              share
+            </div>
+          </button>
+        </div>
+        <!--   -->
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+</div>
+
+{{ banner.banrs(banner=1) }}
+<div class="container-xxl">
+  <div class="row  ">
+    <div class="col-md-8">
+      <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+        <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle ">
+          <h1 class="fs-4 m-0 p-0 ">Informations about: Title of the specific event! </h1>
+        </div>
+        <div class="tuning-box-body  p-3 pt-2 ">
+          <p>Description HTML of the event. This blog post shows a few different types of content that's supported and
+            styled with Bootstrap. Basic
+            typography, lists, tables, images, code, and more are all supported as expected.</p>
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space
+            and
+            show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
+            demonstration flowing, so be on the lookout for this exact same string of text.</p>
+        </div>
+      </div>
+      <!-- -->
+      <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+        <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle box">
+          <h5 class="fs-4 m-0 p-0 ">more info</h5>
+        </div>
+        <div class="tuning-box-body  p-3 pt-2  ">
+          Cycle: once a year
+
+          <div>
+            <div class="badge text-bg-light border border-success-subtle fw-normal text-lowercase mt-2 me-2 end-0">
+              FREE ENTRY
+            </div>
+            <div class="badge text-bg-light border border-danger-subtle fw-normal text-lowercase mt-2 me-2 end-0">
+              ENTRY FEES APPLY
+            </div>
+            <div class="badge text-bg-light border border-warning-subtle fw-normal text-lowercase mt-2 me-2 end-0">
+              for charity
+            </div>
+          </div>
+          <div class="small border-start border-primary ps-2 mb-2"> category 1, category2 </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+        <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle ">
+          <h5 class="fs-4 m-0 p-0 ">Photos </h5>
+        </div>
+        <div class="tuning-box-body  p-3 pt-2 ">
+          <img src="{{path}}images/carousel-photo.png" width="100%"></img>
+        </div>
+      </div>
+      <!-- -->
+      <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+        <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle box">
+          <h5 class="fs-4 m-0 p-0 ">Videos</h5>
+        </div>
+        <div class="tuning-box-body  p-3 pt-2  ">
+
+          <video controls width="100%">
+            <source src="https://placehold.co/1920x1080.mp4" type="video/webm" />
+          </video>
+        </div>
+      </div>
+      <!-- -->
+      <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+        <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle ">
+          <h5 class="fs-4 m-0 p-0 ">Map </h5>
+          <ul>
+            <li>map mode</li>
+            <li>street view mode</li>
+            <li><a target="_blank"
+                href="http://maps.google.com/maps?q=32-62+31st+St+Queens%2C+NY&zoom=14&size=512x512&maptype=roadmap&sensor=false">
+                get directions
+              </a> </li>
+          </ul>
+        </div>
+
+
+        <div class="tuning-box-body  p-3 pt-2 ">
+          <p class="fw-light"> Whilton Mill Karting & Outdoor Activities, Whilton, Locks, UK</p>
+
+          <img src="{{path}}images/map.png" width="100%"></img>
+        </div>
+      </div>
+
+
+      <!-- -->
+      <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+        <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle box">
+          <h5 class="fs-4 m-0 p-0 ">Participant to this event</h5>
+        </div>
+        <div class="tuning-box-body  p-3 pt-2  ">
+          34 tuners<br>
+          456 cars of 400 tuner <br>
+          390 clubs<br>
+
+          content
+        </div>
+      </div>
+
+
+    </div>
+    <!-- sidebar right -->
+    <div class="col-md-4   ">
+      <!-- 
+      <div class="  position-sticky" style="top: 6rem;"  >-->
+      <div class=" sticky-top" style="top: 6rem;">
+        <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+          <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle box">
+            <h5 class="fs-4 m-0 p-0 ">Statistic</h5>
+            <div class="arrow-ribbon">you created this event</div>
+          </div>
+          <div class="tuning-box-body  p-3 pt-2  ">
+
+            8927 Views<br>
+            990 are going to the event, you are also going.<br>
+            12 Ratings <br>
+            2 Favorites<br>
+            990 liked this event<br>
+            120 saved this event<br>
+            <p class="blog-post-meta">created on January 1, 2021 by <a href="#">UserName</a></p>
+
+          </div>
+        </div>
+        <!-- -->
+        <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+          <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle box">
+            <h5 class="fs-4 m-0 p-0 ">Contact</h5>
+          </div>
+          <div class="tuning-box-body  p-3 pt-2  ">
+
+            phone onlz for registered UserName
+            <br> email for registered UserName
+
+
+          </div>
+        </div>
+
+        <!-- -->
+        <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+          <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle box">
+            <h5 class="fs-4 m-0 p-0 ">Qr-code</h5>
+          </div>
+          <div class="tuning-box-body  p-3 pt-2  ">
+
+            <img src="{{path}}images/qr-code.png" width="100%" style="max-width: 1147px;">
+
+
+          </div>
+        </div>
+
+
+        {{ banner.banrs(banner=3) }}
+
+        <div class="tuning-box bg-body-tertiary mb-4 shadow-sm rounded">
+          <div class="tuning-box-body  p-3 pt-2 ">
+
+            <p class="small"> 2ningauto is not the organizer of the event: "Essen Motor Show". We assume no liability
+              for the accuracy of the data for this event.<br>
+              Are you the organizer of a meeting or trade fair yourself? write us to <a href="#">claim the event</a><br>
+              Are you seeing error please hlep us <a href="#">reporting them</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <nav class=" d-flex justify-content-between my-3 border-top border-bottom py-3 " aria-label="Pagination">
+    <a class="btn btn-outline-primary rounded-pill" href="#">Older event in the region</a>
+    <a class="btn btn-outline-primary rounded-pill ">Newer event in the region</a>
+  </nav>
+
+  <div class="tuning-box bg-body-tertiary mb-4 shadow-sm  rounded  ">
+    <div class="tuning-box-header  p-3 pb-2 border-bottom border-light-subtle ">
+      <h5 class="fs-4 m-0 p-0 ">Similar events </h5>
+    </div>
+    <div class="tuning-box-body  p-3 pt-2 ">
+      list events
+    </div>
+  </div>
+
+
+</div>

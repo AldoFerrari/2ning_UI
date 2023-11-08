@@ -1,0 +1,55 @@
+ 
+ 
+ nav.navbar {
+  margin: $spacewebsite $spacewebsiteright 0 $spacewebsite;
+  border-left: 1px solid $color;
+  border-right: 1px solid $color;
+}
+
+
+
+
+
+/*--- nav scroller --
+*/
+.nav-scroller .nav {
+  color: rgba(255, 255, 255, .75);
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+ 
+.nav-scroller .nav-link:hover,
+.nav-link.active, a.nav-link.active,.nav-scroller li.active a  { 
+  color: #007bff;
+}
+
+
+
+
+/* -----  nav-2ningauto -----*/
+.nav-2ningauto a:hover,
+.nav-2ningauto .active a:hover,
+.nav-2ningauto a.active:hover {
+  background: white;
+  color: black;
+}
+
+.nav-2ningauto a {
+  color: rgb(0, 157, 255);
+}
+
+.nav-2ningauto a.active {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link:hover,
+ .nav-tabs .nav-link:focus {
+   border-bottom: 1px solid white;
+ }

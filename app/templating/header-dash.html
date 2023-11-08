@@ -1,0 +1,36 @@
+<header>
+  <nav
+    class="navbar navbar-expand-md border-bottom bg-body-tertiary fixed-top shadow-sm p-0"
+  >
+    <div class="container-fluid">
+      <!-- page logo title -->
+      <div>{% include "templating/header-pieces/logo-title.html" %}</div>
+
+      <!-- main menu -->
+      <nav class="d-none d-md-block">
+        {% include "templating/header-pieces/main-menu.html" %}
+      </nav>
+
+    
+      <div class="d-flex">
+        <!-- logged -->
+        {% include "templating/header-pieces/logged.html" %}
+      </div>
+  
+ 
+
+      <!-- button -->
+      <button
+        class="btn btn-tertiary d-md-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasResponsive"
+        aria-controls="offcanvasResponsive"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+ 
+</header>

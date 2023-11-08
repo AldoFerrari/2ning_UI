@@ -1,0 +1,164 @@
+ 
+
+  <main class="p-0 m-0 ">  
+          <!-- 
+  <input type="date" id="bookdate" min="<?=date('Y-m-d')>" value="<?=date('Y-m-d')>" max="<?=date('Y-m-d', strtotime("+7 day", time()))>" value="<?=date('Y-m-d')>" >
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(function () { 
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if (month < 10)
+      month = '0' + month.toString();
+    if (day < 10)
+      day = '0' + day.toString();
+
+    var maxDate = year + '-' + month + '-' + day;
+
+    // or instead:
+    // var maxDate = dtToday.toISOString().substr(0, 10);
+
+    // alert(maxDate);
+    $('#txtDate').attr('min', maxDate);
+
+    //$('#txtDateTwo').attr('min', maxDate); 
+    //  document.getElementById("txtDateTwo").value = "2014-02-09"; 
+    const date_value = document.getElementById('txtDate');
+    date_value.addEventListener('change', function () { 
+      dtToday = date_value.value;
+      //alert(dtToday);  
+     
+      $('#txtDateTwo').attr('min', dtToday);
+       $('#txtDateTwo').val(dtToday);
+ 
+    })
+
+  });
+</script>
+<h3>Suggest one Tuning Event</h3>
+<div class="row g-5">
+        
+        <div class=" "> 
+         
+          <form class="needs-validation" novalidate>
+
+            <h4 class="mb-3"> location & time</h4>
+            <div class="row g-3"> 
+               <div class="col-sm-6">
+                <label for="txtDate" class="form-label">starting date</label> 
+                <input class="form-control" type="date" name="date" id="txtDate" required />
+                <div class="invalid-feedback">
+                  Valid starting date is required.
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="txtDate" class="form-label">end date</label> 
+               <input class="form-control"  type="date" name="dateend" id="txtDateTwo" />
+                <div class="invalid-feedback">
+                  Valid end date is required.
+                </div>
+              </div>
+
+             
+              <!-- 
+<input type="datetime-local" name="datetime" id="datetime" pattern="\d{4}-\d{2}-\d{2}" />
+-->
+
+ 
+   <!--  
+              <div class="col-12">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+                  <div class="invalid-feedback">
+                    Your username is required.
+                  </div>
+                </div>
+              </div>
+
+       <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+-->   
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" minlength="3" required>
+                <div class="invalid-feedback">
+                  Please enter the event address.
+                </div>
+              </div>
+
+        
+
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>United States</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                  <option value="">Choose...</option>
+                  <option>California</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+            <h4 class="mb-3"> poster or main image</h4>
+            <div class="col-12">
+              <label for="address" class="form-label">image (jpg,jpeg,png,bmp) max 500kb</label>
+              <input type="file" class="form-control" id="poster"  accept=".jpg,.png,.jpeg,.bmp"   >
+              <div class="invalid-feedback">
+                Please enter the poster.
+              </div>
+            </div>
+
+            <hr class="my-4">
+            <h4 class="mb-3"> info </h4>
+            <div class="col-12">
+              <label for="address" class="form-label">Description</label>
+              <textarea type="textarea" class="form-control" id="description" rows="5" ></textarea>
+              <div class="invalid-feedback">
+                Please enter the description.
+              </div>
+            </div>
+         
+
+            <hr class="my-4">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">submit event for approval</button>
+          </form>
+        </div>
+      </div>
+ 
+
+
+  </main>
+
+  

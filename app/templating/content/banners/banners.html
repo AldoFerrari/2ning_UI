@@ -1,0 +1,30 @@
+
+
+{% macro banrs(banner=1) %}
+ 
+
+<div class="tuning-box bg-body-tertiary shadow-sm  text-center rounded position-relative m-1 mb-4  p-2"  >
+ 
+  <div class="position-absolute top-0 end-0">
+  <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0  ">
+    <div  class=" p-1 m-0" data-bs-toggle="modal"
+    data-bs-target="#premiumYouModal"> <i class="bi-x-lg"></i> remove ads</div>
+   </button>
+  </div>
+    {% if banner==1 %}
+    <img src="{{path}}images/banner1.png" width="100%" style="max-width: 973px;" ></img>
+
+  {% endif %} 
+  {% if banner==2 %}
+    <img src="{{path}}images/banner2.png" width="100%"  style="max-width: 304px;" ></img>
+
+  {% endif %} 
+  {% if banner==3 %}
+    <img src="{{path}}images/banner3.png" width="100%"  style="max-width: 303px;" ></img>
+
+  {% endif %} 
+  </div>
+ 
+ 
+{% endmacro %} 
+ 

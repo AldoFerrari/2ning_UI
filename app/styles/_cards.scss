@@ -1,0 +1,146 @@
+ /* This may not be needed depending on if you want to restrict the card size*/
+ 
+
+ .card-image-wrapper {
+   display: flex;
+   width: 100%;
+   height: $maxHeightCardImg;
+   /* Just to show the size of the image wrapper */
+   background-color: darkgrey;
+   z-index: 2;
+   overflow: hidden;
+ }
+
+ .list-group-item .card-image-wrapper { 
+  max-width: $maxWidthCardImg; 
+}
+
+.itema-wrapper {
+  align-items: stretch;
+  display: flex;
+}
+
+.itema {
+  align-items: center;
+  display: flex; 
+}
+ 
+ /*  */
+
+ .list-group-item + .list-group-item {
+  border-top-width: 1px;
+}
+
+
+
+
+
+
+
+ /* ------------ */
+
+ /*--- CARDS ---*/
+
+
+
+
+ /* */
+ .item {
+   transition: all .2s ease-in;
+   overflow: hidden;
+   border: 1px solid grey;
+   border-radius:   $radiusCard;
+   padding:0px;
+   margin:0px;
+  // max-width: fit-content;
+   width: $maxWidthCardImg;
+ }
+
+ .item img {
+   transition: all .2s ease-in;
+   /*opacity: 0.9;*/
+   position: relative;
+ }
+
+ .item img {
+  float: left;
+  max-width:   $maxWidthCardImg;
+}
+
+.item img:hover {
+ /*opacity: 0.9;*/
+ transform: scale(1.15);
+}
+
+.card-img-top {
+  display: block;
+  width: auto;
+  max-height:  $maxHeightCardImg;
+  max-width:   $maxWidthCardImg;
+  margin: auto;
+}
+.img-2ningauto {
+  background-size: cover;
+  background-position: center;
+}
+ 
+
+ .item.grid-group-item,
+ .item.list-group-item {
+   background-color: white;
+ }
+
+ .item.grid-group-item:nth-of-type(odd),
+ .item.list-group-item:nth-of-type(odd) {
+   background: #e7e7e7;
+ }
+
+ .item.list-group-item:nth-of-type(odd):hover,
+ .item.list-group-item:hover,
+ .item.grid-group-item:nth-of-type(odd):hover,
+ .item.grid-group-item:hover {
+   
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+ }
+
+ /* */
+
+
+
+
+ .item.list-group-item {
+   float: none;
+   width: 100%; 
+ }
+
+ .item.list-group-item:before,
+ .item.list-group-item:after {
+   display: table;
+   content: " ";
+ }
+
+
+
+
+ .item.list-group-item:after {
+   clear: both;
+ }
+
+ .list-group-item:first-child {
+  border-top-left-radius:  $radiusCard;
+  border-top-right-radius:  $radiusCard;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: $radiusCard;
+  border-bottom-left-radius: $radiusCard;
+}
+
+ 
+ 
+
+ .wrap-card {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+
+ }

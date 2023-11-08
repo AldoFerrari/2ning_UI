@@ -1,0 +1,32 @@
+{% set active_page = "dash" %}  
+{% set active_area = "dash" %}  
+{% set path = "../" %}
+<!DOCTYPE html>
+{% include "templating/pieces/scriptsTop.html" %}
+
+<body class="d-flex flex-column h-100" id="gototop">
+  <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+  {% include "templating/header-dash.html" %}
+  <div class="container-xxl p-0  mb-4 ">
+    {% import "templating/bradcrumb.html" as bradcrumb %} 
+    {{ bradcrumb.linking( name0='Dashboard', link0='index.html', name2='') }}
+    
+    {% include "dashboard/pieces/menu.html" %}
+    <div class=" border border-top-0 p-3 mx-3">
+      {% include "dashboard/content/homepage.html" %}
+    </div>
+  </div>
+
+  {% include "templating/footer-dash.html" %}
+  {% include "templating/pieces/scriptsBottom.html" %}
+  {% include "templating/common.html" %}
+</body>
+
+</html>

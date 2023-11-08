@@ -1,0 +1,256 @@
+ 
+<div id="map" class="mb-4 "  ></div>
+<script>
+  // Create a Tile Layer and add it to the map
+
+  var map = L.map("map", {
+    // Set latitude and longitude of the map center (required)
+    center: [42.8088069, 43.7900817],
+    // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
+    zoom: 5,
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+    minZoom: 1,
+  }).addTo(map);
+
+  L.control
+    .scale({
+      metric: true,
+      imperial: false,
+    })
+    .addTo(map);
+
+  var startmarkers = [
+    ["event title", 48.8581817, 2.3454923, "../event-detail.html", "France"],
+    ["event title", 51.5097076, -0.1327514, "../event-detail.html", "UK"],
+    [
+      "event title",
+      52.3723963,
+      4.8954506,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    ["event title", 50.8455315, 4.3554069, "../event-detail.html", "Belgium"],
+    ["event title", 41.654446, 12.446111, "../event-detail.html", "France"],
+    ["event title", 45.4353311, 12.3320289, "../event-detail.html", "UK"],
+    [
+      "event title",
+      45.6300625,
+      8.7255307,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    ["event title", 41.8088069, 13.7900817, "../event-detail.html", "Belgium"],
+    [
+      "event title",
+      45.05878737391686,
+      7.705310381727685,
+      "../event-detail.html",
+      "Belgium",
+    ],
+    [
+      "event title",
+      45.07006328511392,
+      7.692864932025156,
+      "../event-detail.html",
+      "Belgium",
+    ],
+    [
+      "event title",
+      45.07536737652647,
+      7.671565163259299,
+      "../event-detail.html",
+      "Belgium",
+    ],
+    [
+      "event title",
+      45.08845797681963,
+      7.646845925229447,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    [
+      "event title",
+      45.069548369087535,
+      7.614616501720017,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    [
+      "event title",
+      45.03992868584521,
+      7.548109386102567,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    [
+      "event title",
+      45.09521397573727,
+      7.539182994591787,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    [
+      "event title",
+      45.110965338005855,
+      7.697454782532923,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      45.16593985161213,
+      7.710844369799092,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      45.082367340813626,
+      7.36202845537785,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      44.83821919672531,
+      7.716337534081565,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      44.90901969691296,
+      7.553602550385041,
+      "../event-detail.html",
+      "UK",
+    ],
+    [
+      "event title",
+      44.77269383577886,
+      7.78225550413744,
+      "../event-detail.html",
+      "UK",
+    ],
+    [
+      "event title",
+      44.823123296178714,
+      7.941213937579404,
+      "../event-detail.html",
+      "UK",
+    ],
+    [
+      "event title",
+      47.555611918710184,
+      7.561494713143586,
+      "../event-detail.html",
+      "CH",
+    ],
+    [
+      "event title",
+      36.98876558300256,
+      -4.181516164101585,
+      "../event-detail.html",
+      "ES",
+    ],
+    [
+      "event title",
+      44.91801557887451,
+      7.850920054220362,
+      "../event-detail.html",
+      "UK",
+    ],
+    [
+      "event title",
+      44.900402264259554,
+      8.232162268612218,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      44.753706087457765,
+      10.351022585550037,
+      "../event-detail.html",
+      "UK",
+    ],
+    [
+      "event title",
+      44.46612434439265,
+      9.046884454883793,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    [
+      "event title",
+      44.824001543162765,
+      9.203225659034032,
+      "../event-detail.html",
+      "Netherlands",
+    ],
+    [
+      "event title",
+      44.22863253077148,
+      9.514937009761697,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      44.90315355146323,
+      8.625442944083803,
+      "../event-detail.html",
+      "France",
+    ],
+    [
+      "event title",
+      44.84672585931675,
+      10.38015448694449,
+      "../event-detail.html",
+      "Belgium",
+    ],
+    [
+      "event title",
+      44.973266867664776,
+      11.126902234742717,
+      "../event-detail.html",
+      "Belgium",
+    ],
+    [
+      "event title",
+      44.51392270460316,
+      11.389089347292806,
+      "../event-detail.html",
+      "Belgium",
+    ],
+  ];
+
+  mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+  L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; " + mapLink + " Contributors 2ningAuto.com",
+    maxZoom: 18,
+  }).addTo(map);
+
+  let arrayOfMarkers = [];
+  for (let i = 0; i < startmarkers.length; i++) {
+    marker = new L.marker([startmarkers[i][1], startmarkers[i][2]])
+
+      .bindPopup(
+        '<a href="' +
+        startmarkers[i][3] +
+        '">' +
+        startmarkers[i][0] +
+        "<br>" +
+        startmarkers[i][4]
+      )
+      .addTo(map);
+
+    arrayOfMarkers.push([startmarkers[i][1], startmarkers[i][2]]);
+  }
+  var bounds = new L.LatLngBounds(arrayOfMarkers);
+  map.fitBounds(bounds);
+</script>

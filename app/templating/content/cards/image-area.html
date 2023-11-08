@@ -1,0 +1,67 @@
+{% macro image(version=2, featured=false, datetwo=false,
+imagesrc='https://placehold.co/300x200/EEE/31343C?font=pt-sans&text=Event', path='') %}
+
+
+<div class="card-image-wrapper position-relative overflow-hidden img-2ningauto"
+  style="background-image: url('{{path}}{{ imagesrc }}')">
+  <img src="{{path}}{{ imagesrc }}" class="card-img-top img-fluid" alt="..." />
+  <div class="position-absolute bottom-0 start-0">
+    <div class="float-start text-bg-light text-center p-1 lh-1 text-uppercase">
+      OCT<br />19 </div>
+    {% if datetwo %}
+    <div class="border-start border-primary float-start text-bg-light text-center p-1 lh-1 text-uppercase">
+      OCT<br />20 </div>
+    {% endif %}
+  </div>
+  {% if featured %}
+  <div class="position-absolute top-0 start-0 m-1">
+    <div class="badge rounded-pill bg-warning">featured</div>
+  </div>
+  {% endif %}
+
+
+  <div class="position-absolute  top-0 end-0   d-flex flex-column p-1 ">
+    {% if version == 1 %} 
+
+    <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="left"
+    data-bs-title="I am going to this event">
+    <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#registerYouModal"><i class="bi-cursor"></i>
+      going</div>
+  </button>
+
+    <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top"
+    data-bs-title="like">
+    <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#registerYouModal"><i class="bi-hand-thumbs-up"></i>
+      like</div>
+  </button>
+
+      <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top"
+      data-bs-title="favorite">
+      <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#registerYouModal"> <i class="bi-star"></i> favorite
+      </div>
+    </button>
+    {% else %}
+    <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="left"
+    data-bs-title="I am going to this event">
+    <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#registerYouModal"><i class="bi-cursor"></i>
+      </div>
+  </button>
+
+    <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top"
+    data-bs-title="like">
+    <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#registerYouModal"><i class="bi-hand-thumbs-up"></i>
+      </div>
+  </button>
+
+      <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top"
+      data-bs-title="favorite">
+      <div class=" p-1 m-0" data-bs-toggle="modal" data-bs-target="#registerYouModal"> <i class="bi-star"></i>      </div>
+    </button> 
+    {% endif %}
+
+
+  </div>
+</div>
+
+
+{% endmacro %}

@@ -1,0 +1,34 @@
+{% if logged_user %}
+
+<a href="{{path}}dashboard/add-event.html" class="nav-link  fs-6 py-1 pe-2 {{ 'active' if active_page == 'addevent' else '' }}">+ Add
+    one event</a>
+<a href="{{path}}about.html" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'about' else '' }}">About</a>
+<a href="{{path}}faqs.html" class="nav-link fs-6 py-1 {{ 'active' if active_page == 'faqs' else '' }}">FAQs</a>
+
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'battle' else '' }}"
+    data-bs-toggle="modal" data-bs-target="#exampleModal">Tuning battle</a>
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'Market' else '' }}"
+    data-bs-toggle="modal" data-bs-target="#exampleModal">Market</a>
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'News' else '' }}"
+    data-bs-toggle="modal" data-bs-target="#exampleModal">Tuning News</a>
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'Shop' else '' }}"
+    data-bs-toggle="modal" data-bs-target="#exampleModal">2ningauto Shop</a>
+
+<!-- aria-current="page" -->
+{% else %} 
+
+<a href="#" class="nav-link fs-6 py-1 pe-2  {{ 'active' if active_page == 'addevent' else '' }}" aria-current="page" data-bs-toggle="modal"
+    data-bs-target="#modalSignIn">+ Add one event</a>
+
+<a href="{{path}}about.html" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'about' else '' }} ">About</a>
+<a href="{{path}}faqs.html" class="nav-link fs-6 py-1 {{ 'active' if active_page == 'faqs' else '' }}">FAQs</a>
+
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2  {{ 'active' if active_page == 'battle' else '' }}" data-bs-toggle="modal" data-bs-target="#exampleModal">Tuning
+    battle</a>
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'Market' else '' }}" data-bs-toggle="modal" data-bs-target="#exampleModal">Market</a>
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'News' else '' }}" data-bs-toggle="modal" data-bs-target="#exampleModal">Tuning
+    News</a>
+<a href="#" type="link" class="nav-link fs-6 py-1 pe-2 {{ 'active' if active_page == 'Shop' else '' }}" data-bs-toggle="modal" data-bs-target="#exampleModal">2ningauto
+    Shop</a>
+
+{% endif %}

@@ -1,0 +1,50 @@
+
+{% macro image(version=2, featured=false,  imagesrc='https://placehold.co/300x200/EEE/31343C?font=pt-sans&text=Car', path='') %} 
+
+
+<div class="card-image-wrapper position-relative overflow-hidden img-2ningauto"
+            style="background-image: url('{{path}}{{ imagesrc }}')">
+            <img src="{{path}}{{ imagesrc }}" class="card-img-top img-fluid" alt="..." /> 
+         
+            {% if featured %}
+            <div class="position-absolute top-0 start-0 m-1">
+              <div class="badge rounded-pill bg-warning">featured</div>
+            </div>  
+          {% endif %}
+            
+
+            <div class="position-absolute  top-0 end-0   d-flex flex-column p-1 ">
+              {% if version == 1 %}
+             
+ 
+              <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="like">
+                <div  class=" p-1 m-0" data-bs-toggle="modal"
+                data-bs-target="#registerYouModal"><i class="bi-hand-thumbs-up"></i> like</div>
+               </button>
+
+               <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="favorite">
+                <div  class=" p-1 m-0" data-bs-toggle="modal"
+                data-bs-target="#registerYouModal"> <i class="bi-star"></i>  favorite</div>
+               </button>
+              
+           
+            {% else %}
+         
+            <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="like">
+              <div  class=" p-1 m-0" data-bs-toggle="modal"
+              data-bs-target="#registerYouModal"><i class="bi-hand-thumbs-up"></i></div>
+             </button>
+
+             <button type="button" class="btn btn-sm btn-light mb-1 p-0 m-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="favorite">
+              <div  class=" p-1 m-0" data-bs-toggle="modal"
+              data-bs-target="#registerYouModal"> <i class="bi-star"></i></div>
+             </button>
+ 
+            {% endif %}
+             
+
+            </div>
+          </div>
+
+          
+{% endmacro %} 

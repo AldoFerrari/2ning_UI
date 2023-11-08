@@ -1,0 +1,47 @@
+<header>
+  <nav
+    class="navbar navbar-expand-md border-bottom bg-body-tertiary fixed-top shadow-sm p-0"
+  >
+    <div class="container-fluid">
+      <!-- page logo title -->
+      <div>{% include "templating/header-pieces/logo-title.html" %}</div>
+
+      <!-- main menu -->
+      <nav class="d-none d-md-block">
+        {% include "templating/header-pieces/main-menu.html" %}
+      </nav>
+
+      {% if logged_user %}
+      <div class="d-flex">
+        <!-- logged -->
+        {% include "templating/header-pieces/logged.html" %}
+      </div>
+      {% else %}
+      <!-- no logged -->
+      <div class="d-flex">
+        {% include "templating/header-pieces/notlogged.html" %}
+      </div>
+      {% endif %}
+
+      <!-- button -->
+      <button
+        class="btn btn-tertiary d-md-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasResponsive"
+        aria-controls="offcanvasResponsive"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!--menu 2 after header -->
+  <div class="nav-scroller d-none d-md-flex bg-body-tertiary shadow-sm"  >
+    <div class="container-fluid p-2" >
+      <nav class="nav justify-content-center">
+        {% include "templating/header-pieces/menu-secondary.html" %}
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,22 @@
+{% macro linking(name0='Homepage', link0='index.html', name1='', link1='', name2='Actual page' ) %}
+<nav aria-label="breadcrumb ">
+  <ol class="breadcrumb breadcrumb-chevron  bg-body-light   py-3 m-0 mx-3">
+    <li class="breadcrumb-item">
+      <a class="link-body-emphasis" href="{{link0}}">
+        {{name0}}
+      </a>
+    </li>
+    {% if link1 != '' %} <!--  -->
+    <li class="breadcrumb-item" aria-current="page">
+      {{name1}}
+    </li> 
+    {% endif %} 
+    {% if name2 != '' %}
+    <!--  -->
+    <li class="breadcrumb-item active" aria-current="page">
+      {{name2}}
+    </li> 
+    {% endif %}
+  </ol>
+</nav>
+{% endmacro %}

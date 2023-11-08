@@ -1,0 +1,42 @@
+ 
+ .demo-wrap {
+  overflow: hidden;
+  position: relative;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+}
+
+.demo-bg {
+  opacity: 0.5;
+  position: absolute;
+   width: 100%;
+ // filter: grayscale(100%);
+}
+/*
+.demo-bg:hover {
+  filter: grayscale(0%);
+}
+*/
+.demo-content {
+  position: relative;
+  display: flex;
+  align-self: flex-start; 
+  width: 100%;
+
+} 
+ 
+.demo-wrap:before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block; 
+    opacity: 0.9; 
+    background: black; 
+   // border:1px solid black;
+}
+ 

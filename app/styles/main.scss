@@ -1,0 +1,121 @@
+ /* Custom page CSS
+-------------------------------------------------- */
+
+
+
+ @import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+ $bootstrap-icons-font-dir: "../fonts" !default;
+
+ @import "./node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+ @import "variables.scss";
+
+ html,
+ body {
+   // overflow-x: hidden;
+   font-family: 'Roboto Flex', sans-serif;
+ }
+
+ html {
+   background: $bgcolor;
+   padding-top: 72px;
+  // overflow-x: hidden;
+ }
+
+ body {
+   overflow-y: auto;
+   // margin: $spacewebsite; 
+   display: block;
+   border-left: 1px solid $color;
+   border-right: 1px solid $color;
+   margin: $spacewebsite $spacewebsiteright $spacewebsite $spacewebsite;
+ }
+
+ .cornicetop {
+   display: block;
+   position: fixed;
+   height: $spacewebsite;
+   width: $spacewebsitecalc;
+   background-color: $bgcolor;
+   top: 0px;
+   left: 0px;
+   z-index: 1039;
+   border-bottom: 1px solid $color;
+   margin-left: $spacewebsite;
+   margin-right: $spacewebsite;
+ }
+
+ .cornicebottom {
+   display: block;
+   position: fixed;
+   height: $spacewebsite;
+   width: $spacewebsitecalc;
+   background-color: $bgcolor;
+   bottom: 0px;
+   left: 0px;
+   z-index: 1039;
+   margin-left: $spacewebsite;
+   margin-right: $spacewebsite;
+   border-top: 1px solid $color;
+ }
+
+ /* fonts */
+ p {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   text-rendering: optimizelegibility !important;
+ }
+
+ /* website text selections */
+ html ::selection {
+   color: white;
+   background-color: black;
+ }
+
+ /*----------------------------------*/
+
+ @import "nav.scss";
+
+ @import "scrollbar.scss";
+
+ @import "maps.scss";
+
+ @import "darklightmode.scss";
+
+ @import "cards.scss";
+
+ @import "ribbons.scss";
+
+ @import "image_display.scss";
+
+ @import "helpers.scss";
+
+ 
+
+ /* RESPONSIVE */
+ @include media-breakpoint-up(xs) {
+   /* red */
+   @import "responsive_xs.scss";
+ }
+
+ @include media-breakpoint-up(sm) {
+   /* black */
+   @import "responsive_sm.scss";
+ }
+
+ @include media-breakpoint-up(md) {
+   /* green */
+   @import "responsive_md.scss";
+ }
+
+ @include media-breakpoint-up(lg) {
+   /* yellow */
+   @import "responsive_lg.scss";
+ }
+
+ @include media-breakpoint-up(xl) {
+   /* grey */
+   @import "responsive_xl.scss";
+ }

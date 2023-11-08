@@ -1,0 +1,29 @@
+{% set active_page = "index" %} {% set logged_user = false %}
+{% set path = "../" %}
+<!DOCTYPE html>
+{% include "Aldoministration/templating/scriptsTop.html" %}
+<body class="d-flex flex-column h-100" id="gototop">
+  <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+  {% include "Aldoministration/templating/header.html" %}
+
+  <!------------------------------------------->
+  <!-- Begin page content -->
+<main class="container-fluid"> 
+  {% include "Aldoministration/templating/content/users.html" %}
+</main>
+  <!--------------------------------------------------->
+
+  {% include "Aldoministration/templating/footer.html" %}
+  {% include "Aldoministration/templating/common.html" %}
+  {% include "Aldoministration/templating/scriptsBottom.html" %}
+
+</body>
+
+</html>

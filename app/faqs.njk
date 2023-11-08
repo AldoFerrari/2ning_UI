@@ -1,0 +1,23 @@
+{% set active_page = "faqs" %} {% set logged_user = true %}
+<!DOCTYPE html>
+ {% include "templating/pieces/scriptsTop.html" %}
+  <body class="d-flex flex-column h-100" id="gototop">
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+    
+    {% include "templating/header.html" %} 
+
+    {% include "templating/content/faqs.html" %}  
+   
+    {% include "templating/footer.html" %}
+ 
+    {% include "templating/pieces/scriptsBottom.html" %}
+   
+    {% include "templating/common.html" %}
+  </body>
+</html>

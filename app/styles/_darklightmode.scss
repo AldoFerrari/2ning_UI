@@ -1,0 +1,10 @@
+ /* dark mode SVG */
+html[data-theme='dark'] svg,
+html[data-bs-theme='dark'] svg {
+  fill: white;
+}
+
+html[data-theme='light'] svg,
+html[data-bs-theme='light'] svg {
+  fill: black;
+}

@@ -1,0 +1,204 @@
+{% import "templating/content/cards/3image-area.html" as cardtop %}
+{% import "templating/content/cards/3body.html" as cardbody %}
+{% import "templating/content/cards/3footer.html" as cardfooter %}
+
+ 
+
+<!-- -----------------ATTIVA BOTTONI FILTRI UI------------------------------ -->
+<div class="container-xxl sticky-top  bg-white" style="top: 89px">
+  <div class="row mb-2 border-bottom mt-2   ">
+    <div class="col-xs-12 col-md-8">
+      <h1>Tuning Cars of ours 3560 Tuners</h1>
+    </div>
+    <div class="col-xs-12 col-md-4 d-flex align-items-center justify-content-end">
+      <div class=" mb-2">
+        <a href="#" class="btn btn-sm btn-outline-dark active" role="button" id="filtri"><i class="bi bi-funnel"></i>
+          Filtri
+        </a>
+        <div class="btn-group">
+          <a href="#" id="list" class="btn btn-sm btn-outline-dark " role="button"><i class="bi bi-list-ul"></i>
+            Elenco</a>
+          <a href="#" id="grid" class="btn btn-sm btn-outline-dark" role="button"><i class="bi bi-grid"></i>
+            Griglia</a>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ----------MAPPA---------- -->
+ 
+
+<!-- --------CARDS & FILTERS ------------ -->
+<div class="container-xxl px-0">
+  <div class="row">
+    <!-- sidebar -->
+    <div class="col-md-3" id="filters">
+      <div class=" sticky-top  " style="top: 162px">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">filters</h4>
+          <!-- Sidebar with Filters -->
+
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Filter" />
+          </div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option value="">Select Category</option>
+              <option value="category1">Category 1</option>
+              <option value="category2">Category 2</option>
+              <option value="category3">Category 3</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="premiumFilter" />
+              <label class="form-check-label" for="premiumFilter">
+                Premium Users Only
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="applyFilters">
+            Apply Filters
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9" id="cars">
+      <div class="d-flex flex-wrap justify-content-start  ">
+        <!-- cards area -->
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image(featured=true) }}
+          {{ cardbody.bodi(fee=2,cat='1 car') }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image(version=1) }}
+          {{ cardbody.bodi(fee=2, cat='6 cars, 3 club, 2 businesses' ) }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image(featured=true) }}
+          {{ cardbody.bodi(fee=2,cat='2 car') }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image() }}
+          {{ cardbody.bodi() }}
+          {{ cardfooter.footer() }}
+        </div>
+
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image() }}
+          {{ cardbody.bodi() }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image() }}
+          {{ cardbody.bodi() }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image() }}
+          {{ cardbody.bodi() }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image() }}
+          {{ cardbody.bodi() }}
+          {{ cardfooter.footer() }}
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image() }}
+          {{ cardbody.bodi() }}
+          {{ cardfooter.footer() }}
+        </div>
+
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+        <!-- cards area -->
+      </div>
+    </div>
+    <!-- -->
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+  $(document).ready(function () {
+    // toggle columns and filteres
+    $('#filtri').click(function (event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+      $("#filters").toggleClass("d-none");
+
+      if ($("#filters").hasClass("d-none")) {
+        $("#cars").removeClass().addClass("col-12")
+      } else {
+        $("#cars").removeClass().addClass("col-md-9")
+      }
+    });
+
+    //// toggle MAP
+    $('#ShowMap').click(function (event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+      $("#mappa").toggle(); // Mostra il div con ID "mappa"
+    });
+
+    $('#list').click(function (event) {
+      event.preventDefault();
+      /* */
+      $('#grid').removeClass('active');
+      $('#list').addClass('active');
+      /* */
+      $('#cars .item').removeClass('grid-group-item');
+      $('#cars .item').addClass('list-group-item');
+      $('#cars .item').removeClass('flex-column');
+      $('#cars .item').addClass('flex-row');
+    });
+
+    $('#grid').click(function (event) {
+      event.preventDefault();
+      /* */
+      $('#list').removeClass('active');
+      $('#grid').addClass('active');
+      /* */
+      $('#cars .item').removeClass('list-group-item');
+      $('#cars .item').addClass('grid-group-item');
+      $('#cars .item').removeClass('flex-row');
+      $('#cars .item').addClass('flex-column');
+    });
+
+    $('#grid').click();
+    //$('#list').click();
+    // $('#filtri').click();
+
+    // $('#columnToggle').click();
+
+    $('#ShowMap').click();
+
+  });
+
+
+
+</script>

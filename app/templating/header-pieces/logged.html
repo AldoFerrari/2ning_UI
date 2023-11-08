@@ -1,0 +1,40 @@
+<!-- logged  in -->
+<div class="hstack ">
+  <ul class="nav list-unstyled d-flex ">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-black p-1" href="#" data-bs-toggle="dropdown" aria-expanded="false">EN</a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">FR - french</a></li>
+        <li><a class="dropdown-item" href="#">IT - italian</a></li>
+        <li><a class="dropdown-item" href="#">DE - German</a></li>
+        <li><a class="dropdown-item" href="#">ES - Spanish</a></li>
+        <li><a class="dropdown-item active" href="#">EN - English</a></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="vr"></div>
+  <div class="mx-1">  
+    <span class="small">1500</span><img src="{{path}}images/2coin.svg" class="ms-1" height="20" alt="My Happy SVG" />
+  </div>
+  <div class="vr"></div>
+  <div class="dropdown   ">
+    <a class="btn btn-light btn-sm dropdown-toggle {{ 'active' if active_area == 'dash' else '' }}" href="#" role="button" data-bs-toggle="dropdown"
+      aria-expanded="false"> 
+        <img src="{{path}}images/user.png" alt="user profile picture" width="32" height="32" class="rounded-circle"> 
+        <div class="d-inline-block  text-capitalize text-truncate small align-middle  " style="width:80px;">2ningAldo.comTuningclub</div>
+    </a>
+    <ul class="dropdown-menu text-small shadow">
+      <li><a class="dropdown-item" href="{{path}}dashboard/add-event.html">+ New event</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="{{path}}dashboard/index.html">Dashboard</a></li>
+ 
+      <li><a class="dropdown-item" href="{{path}}dashboard/profile.html">Profile</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="{{path}}index.html">Sign out</a></li>
+    </ul>
+  </div>
+</div>

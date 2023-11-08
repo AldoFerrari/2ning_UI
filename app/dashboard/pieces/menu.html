@@ -1,0 +1,45 @@
+<ul class="nav nav-tabs  sticky-top  bg-white pt-2 mx-3" style="top: 88px">
+  <li class="nav-item">
+    <a class="nav-link {{ 'active' if active_page == 'dash' else '' }}" aria-current="page"
+      href="{{path}}dashboard/index.html">Dashboard</a>
+  </li>
+
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle {{ 'active' if active_page == 'events' else '' }}" data-bs-toggle="dropdown"
+      href="#" role="button" aria-expanded="false">Events</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item {{ 'active' if active_page == 'events' else '' }}"
+          href="{{path}}dashboard/add-event.html">add event</a></li>
+      <li><a class="dropdown-item" href="#"> link</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="#">Favorite Events <span class="badge bg-secondary rounded-pill">14</span></a>
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="#"> link</a></li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {{ 'active' if active_page == 'cars' else '' }}" href="{{path}}dashboard/cars.html">Cars</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link {{ 'active' if active_page == 'profile' else '' }}"
+      href="{{path}}dashboard/profile.html">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {{ 'active' if active_page == 'settings' else '' }}"
+      href="{{path}}dashboard/settings.html">Settings</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Clubs</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Business</a>
+  </li>
+</ul>
