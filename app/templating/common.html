@@ -35,7 +35,7 @@
       </div>
       <div class="modal-body">
         only premium user can partecipate as club, business or with multiple cars.
-        as basic user you can only partecipate as a tuner. 
+        as basic user you can only partecipate as a tuner.
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
@@ -44,7 +44,6 @@
     </div>
   </div>
 </div>
-<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
 
 <!-- ------------------------------------------- -->
 
@@ -84,31 +83,20 @@
       aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+    {% if logged_user %}
+    <nav class="  nav-scroller border-1 border-bottom ">
+      {% include "dashboard/pieces/menu.html" %}
+    </nav> 
+    {% endif %}
+    <nav class="   ">
+      {% include "templating/header-pieces/main-menu.html" %}
+    </nav>
+    
+    <nav class="  nav-scroller border-1 border-top ">
+      {% include "templating/header-pieces/menu-secondary.html" %}
 
-    {% include "templating/header-pieces/main-menu.html" %}
-    <nav class="nav  justify-content-center"> {% include "templating/header-pieces/menu-secondary.html" %}
     </nav>
 
-    <!--   <div class="  " id=" ">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>-->
 
   </div>
 </div>

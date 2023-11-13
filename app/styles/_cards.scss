@@ -52,8 +52,8 @@
    border-radius:   $radiusCard;
    padding:0px;
    margin:0px;
-  // max-width: fit-content;
    width: $maxWidthCardImg;
+   max-width:100%; 
  }
 
  .item img {

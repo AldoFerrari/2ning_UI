@@ -1,9 +1,13 @@
 body { 
-  //  background-color: black !important;
+   // background-color: black !important;
   }
 
   html,
   main {
-    padding-top: 68px;
-
+    padding-top: 68px; 
   }
+
+  
+.item { 
+  max-width:  $maxWidthCardImg; 
+}

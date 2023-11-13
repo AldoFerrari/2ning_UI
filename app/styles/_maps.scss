@@ -9,4 +9,23 @@
     width: 100%;
   }
   
+  .FindPlaceandPin {
+    #map {
+      width: 100%;
+      height: 200px;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      z-index: 30;
+    }
+  
+    .dropsearch .dropdown-menu {
+      max-width: 100%;
+      text-overflow: ellipsis;
+    }
+    .dropsearch .dropdown-menu .dropdown-item {
+      white-space: normal;
+      overflow: hidden;
+    }
+  }
   
