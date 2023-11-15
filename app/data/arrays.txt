@@ -1,0 +1,139 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "key": "global_name_lang",
+      "EN": "english name",
+      "IT": "contenuto nome",
+      "FR": "contenu prenom",
+      "ES": "nome espagnol",
+      "DE": "deutschland name"
+    },
+    {
+      "id": 2,
+      "key": "global_content_lang",
+      "EN": "english content",
+      "IT": "contenuto italiano",
+      "FR": "contenu francaise",
+      "ES": "contenudo espagnol",
+      "DE": "deutschland"
+    },
+    {
+      "id":  3,
+      "key": "gen_sitename",
+      "EN": "name of the website",
+      "IT": "nome del sito",
+      "FR": " ",
+      "ES": " ",
+      "DE": ""
+    },
+    {
+      "id": 4,
+      "key": "gen_website",
+      "EN": "",
+      "IT": "2ningauto.it",
+      "FR": " ",
+      "ES": " ",
+      "DE": ""
+    },
+    {
+      "id": 5,
+      "key": "header_menu1_home",
+      "EN": "Home",
+      "IT": "Vetrina",
+      "FR": "vitrine",
+      "ES": " ",
+      "DE": ""
+    },
+    {
+      "id": 6,
+      "key": "global_001",
+      "EN": "purus sit",
+      "IT": "convallis duis consequat",
+      "FR": "nunc",
+      "ES": null,
+      "DE": "feugiat"
+    },
+    {
+      "id": 7,
+      "key": "global_002",
+      "EN": "vestibulum vestibulum ante",
+      "IT": "massa volutpat convallis",
+      "FR": "adipiscing elit",
+      "ES": null,
+      "DE": null
+    },
+    {
+      "id": 8,
+      "key": "global_003",
+      "EN": "nullam sit",
+      "IT": "quis odio consequat",
+      "FR": "magna",
+      "ES": null,
+      "DE": null
+    },
+    {
+      "id": 9,
+      "key": "global_004",
+      "EN": "imperdiet sapien",
+      "IT": "nunc proin",
+      "FR": "viverra pede ac",
+      "ES": null,
+      "DE": null
+    },
+    {
+      "id": 10,
+      "key": "global_005",
+      "EN": "massa id",
+      "IT": "aliquam non",
+      "FR": "rutrum nulla nunc",
+      "ES": null,
+      "DE": null
+    },
+    {
+      "id": 11,
+      "key": "gl_001",
+      "EN": "hendrerit at vulputate",
+      "IT": "ultrices mattis odio",
+      "FR": "cubilia curae",
+      "ES": "risus",
+      "DE": "nec molestie"
+    },
+    {
+      "id": 12,
+      "key": "gl_002",
+      "EN": "duis",
+      "IT": "aliquet",
+      "FR": "mi pede malesuada",
+      "ES": null,
+      "DE": null
+    },
+    {
+      "id": 13,
+      "key": "gl_003",
+      "EN": "condimentum curabitur in",
+      "IT": "in sapien",
+      "FR": null,
+      "ES": null,
+      "DE": null
+    },
+    {
+      "id": 14,
+      "key": "gl_004",
+      "EN": "viverra eget congue",
+      "IT": "vestibulum",
+      "FR": "rhoncus aliquam",
+      "ES": null,
+      "DE": "justo"
+    },
+    {
+      "id": 15,
+      "key": "gl_005",
+      "EN": "cras",
+      "IT": "metus",
+      "FR": "tristique tortor",
+      "ES": "pellentesque viverra",
+      "DE": null
+    }
+  ]
+}

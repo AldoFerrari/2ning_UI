@@ -1,6 +1,6 @@
  /* Custom page CSS
 -------------------------------------------------- */
- @import "./node_modules/bootstrap/scss/bootstrap.scss";
+ //@import "./node_modules/bootstrap/scss/bootstrap.scss";
 
  $bootstrap-icons-font-dir: "../fonts" !default;
 
@@ -24,7 +24,7 @@
  }
 
  html {
-   background: $bgcolor; 
+   background: $bgcolor;
  }
 
  body {
@@ -35,12 +35,9 @@
  }
 
  main {
-   margin-top: 80px;
+   margin-top: 60px;
  }
 
- nav{
-  height: 80px;
-}
 
  .nav .nav-link {
    padding: 5px 10px;
@@ -67,3 +64,68 @@
 
  @import "scrollbar.scss";
  @import "helpers.scss";
+
+ /* DATATBLEs */
+
+ .dataTables_wrapper .dataTables_paginate .paginate_button {
+   padding: 0px;
+   margin: 0px;
+   border: 0px;
+ }
+
+ .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+   padding: 0px;
+   margin: 0px;
+   border: 0px;
+   background: none;
+ }
+
+ div.dataTables_wrapper div.dataTables_length select {
+   width: 60px;
+
+ }
+
+ .dataTables_wrapper .dataTables_paginate .page-link {
+   padding: 0.10rem 0.50rem;
+ }
+
+ table.dataTable>tbody>tr:hover td {
+   background-color: lightgray;
+
+ }
+
+ .dt-buttons {
+   margin-bottom: 0.50rem;
+ }
+
+ table.dataTable>tbody>tr>td.sorting_1 {
+   background-color: rgb(197, 211, 211);
+
+ }
+
+ table.dataTable>tbody>tr>td.sorting_2 {
+   background-color: rgb(204, 221, 221);
+
+ }
+
+ table.dataTable>tbody>tr>td.sorting_3 {
+   background-color: rgb(215, 238, 238);
+
+ }
+
+ table.dataTable thead>tr>th.sorting_asc:before,
+ table.dataTable thead>tr>th.sorting_desc:after,
+ table.dataTable thead>tr>td.sorting_asc:before,
+ table.dataTable thead>tr>td.sorting_desc:after {
+   color: rgb(0, 0, 255)
+ }
+
+ table.dataTable>thead>tr>th,
+ table.dataTable>tbody>tr>td {
+   border-right: 1px solid #dee2e6;
+ }
+
+ table.dataTable>thead>tr>th:last-child,
+ table.dataTable>tbody>tr>td:last-child {
+   border-right: none;
+ }
