@@ -54,7 +54,7 @@
       </div>
     </div>
 
- 
+
     <!-- -->
     <div
       class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -100,6 +100,14 @@
           {{ cardtop.image(datetwo=true) }}
           {{ cardbody.bodi(fee=2) }}
           {{ cardfooter.footer() }}
+
+        </div>
+        <!-- -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          {{ cardtop.image(datetwo=true) }}
+          {{ cardbody.bodi(fee=2) }}
+          {{ cardfooter.footer() }}
+
         </div>
       </div>
 
@@ -110,10 +118,10 @@
 
       <div
         class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2 class="h3">featured Cars</h2>
+        <h2 class="h3">featured Tuned Cars</h2>
         <div class=" ">
           <a href="./cars.html" type="button" class="btn btn-primary">
-            view all cars
+            view all tuned cars
           </a>
         </div>
       </div>
@@ -151,100 +159,148 @@
             {{ cardfooter.footer() }}
           </div>
         </div>
-        <!--- 
-    {% import "templating/content/cards/3image-area.html" as cardtop %}
-    {% import "templating/content/cards/3body.html" as cardbody %}
-    {% import "templating/content/cards/3footer.html" as cardfooter %}
-    <div
-      class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-    >
-      <h2 class="h3">featured Clubs</h2>
-      <div class=" ">
-        <a href="./clubs.html" type="button" class="btn btn-primary">
-          view all Clubs
-        </a>
-      </div>
-    </div>
 
-    <div class="p-0 m-0">
-      <div class="d-flex flex-wrap justify-content-start  ">
-      
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi(fee=2) }}
-        {{ cardfooter.footer() }}
-      </div>
-        
-        <div class="card item d-flex mb-2 me-2 flex-fill  ">
-          {{ cardtop.image(featured=true) }}
-          {{ cardbody.bodi(fee=2) }}
-          {{ cardfooter.footer() }}
+        <div
+          class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h2 class="h3">Tuned Cars</h2>
+          <div class=" ">
+            <a href="./cars.html" type="button" class="btn btn-primary">
+              view all tuned cars
+            </a>
+          </div>
         </div>
-          
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi(fee=2) }}
-        {{ cardfooter.footer() }}
-      </div>
-       
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi() }}
-        {{ cardfooter.footer() }}
-      </div>
-        
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi(fee=2) }}
-        {{ cardfooter.footer() }}
-      </div>
-    </div> 
--->
-        <!--
-    <div
-      class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-    >
-      <h2 class="h3">featured Businesses</h2>
-      <div class=" ">
-        <a href="./businesses.html" type="button" class="btn btn-primary">
-          view all Businesses
-        </a>
-      </div>
-    </div>
 
-    <div class="p-0 m-0">
-      <div class="d-flex flex-wrap justify-content-start  ">
-     
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi(fee=2) }}
-        {{ cardfooter.footer() }}
-      </div>
-        
-        <div class="card item d-flex mb-2 me-2 flex-fill  ">
-          {{ cardtop.image(featured=true) }}
-          {{ cardbody.bodi(fee=2) }}
-          {{ cardfooter.footer() }}
-        </div>
-          
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi(fee=2) }}
-        {{ cardfooter.footer() }}
-      </div>
-      
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi() }}
-        {{ cardfooter.footer() }}
-      </div>
-      
-      <div class="card item d-flex mb-2 me-2 flex-fill  ">
-        {{ cardtop.image(featured=true) }}
-        {{ cardbody.bodi(fee=2) }}
-        {{ cardfooter.footer() }}
-      </div>
-    </div> 
-      -->
-      </div>
+        <div class="p-0 m-0">
+          <div class="d-flex flex-wrap justify-content-start  ">
+
+            <div class="card item d-flex mb-2 me-2 flex-fill  ">
+              {{ cardtop.image() }}
+              {{ cardbody.bodi(fee=2) }}
+              {{ cardfooter.footer() }}
+            </div>
+
+            <div class="card item d-flex mb-2 me-2 flex-fill  ">
+              {{ cardtop.image() }}
+              {{ cardbody.bodi(fee=2) }}
+              {{ cardfooter.footer() }}
+            </div>
+
+            <div class="card item d-flex mb-2 me-2 flex-fill  ">
+              {{ cardtop.image() }}
+              {{ cardbody.bodi(fee=2) }}
+              {{ cardfooter.footer() }}
+            </div>
+
+            <div class="card item d-flex mb-2 me-2 flex-fill  ">
+              {{ cardtop.image() }}
+              {{ cardbody.bodi() }}
+              {{ cardfooter.footer() }}
+            </div>
+            <div class="card item d-flex mb-2 me-2 flex-fill  ">
+              {{ cardtop.image() }}
+              {{ cardbody.bodi(fee=2) }}
+              {{ cardfooter.footer() }}
+            </div>
+            <div class="card item d-flex mb-2 me-2 flex-fill  ">
+              {{ cardtop.image() }}
+              {{ cardbody.bodi(fee=2) }}
+              {{ cardfooter.footer() }}
+            </div>
+          </div>
+<!--
+          {% import "templating/content/cards/3image-area.html" as cardtop %}
+          {% import "templating/content/cards/3body.html" as cardbody %}
+          {% import "templating/content/cards/3footer.html" as cardfooter %}
+          <div
+            class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h2 class="h3">featured Clubs</h2>
+            <div class=" ">
+              <a href="./clubs.html" type="button" class="btn btn-primary">
+                view all Clubs
+              </a>
+            </div>
+          </div>
+
+          <div class="p-0 m-0">
+            <div class="d-flex flex-wrap justify-content-start  ">
+
+              <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                {{ cardtop.image(featured=true) }}
+                {{ cardbody.bodi(fee=2) }}
+                {{ cardfooter.footer() }}
+              </div>
+
+              <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                {{ cardtop.image(featured=true) }}
+                {{ cardbody.bodi(fee=2) }}
+                {{ cardfooter.footer() }}
+              </div>
+
+              <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                {{ cardtop.image(featured=true) }}
+                {{ cardbody.bodi(fee=2) }}
+                {{ cardfooter.footer() }}
+              </div>
+
+              <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                {{ cardtop.image(featured=true) }}
+                {{ cardbody.bodi() }}
+                {{ cardfooter.footer() }}
+              </div>
+
+              <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                {{ cardtop.image(featured=true) }}
+                {{ cardbody.bodi(fee=2) }}
+                {{ cardfooter.footer() }}
+              </div>
+            </div>
+
+
+            <div
+              class="tablefilters d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h2 class="h3">featured Businesses</h2>
+              <div class=" ">
+                <a href="./businesses.html" type="button" class="btn btn-primary">
+                  view all Businesses
+                </a>
+              </div>
+            </div>
+
+            <div class="p-0 m-0">
+              <div class="d-flex flex-wrap justify-content-start  ">
+
+                <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                  {{ cardtop.image(featured=true) }}
+                  {{ cardbody.bodi(fee=2) }}
+                  {{ cardfooter.footer() }}
+                </div>
+
+                <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                  {{ cardtop.image(featured=true) }}
+                  {{ cardbody.bodi(fee=2) }}
+                  {{ cardfooter.footer() }}
+                </div>
+
+                <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                  {{ cardtop.image(featured=true) }}
+                  {{ cardbody.bodi(fee=2) }}
+                  {{ cardfooter.footer() }}
+                </div>
+
+                <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                  {{ cardtop.image(featured=true) }}
+                  {{ cardbody.bodi() }}
+                  {{ cardfooter.footer() }}
+                </div>
+
+                <div class="card item d-flex mb-2 me-2 flex-fill  ">
+                  {{ cardtop.image(featured=true) }}
+                  {{ cardbody.bodi(fee=2) }}
+                  {{ cardfooter.footer() }}
+                </div>
+              </div>
+
+               -->
+
+            </div>
 </main>
