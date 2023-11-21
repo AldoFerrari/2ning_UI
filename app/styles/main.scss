@@ -27,11 +27,16 @@
    overflow-y: auto;
    // margin: $spacewebsite; 
    display: block;
-   border-left: 1px solid $color;
-   border-right: 1px solid $color;
-   margin: $spacewebsite $spacewebsiteright $spacewebsite $spacewebsite;
+   // border-left: 1px solid $color;
+  // border-right: 1px solid $color;
+  // margin: $spacewebsite $spacewebsiteright $spacewebsite $spacewebsite;
+ // margin-right:$spacewebsiteright;
  }
-
+ .container-xxl{ 
+  padding-right: $spacewebsite !important;  
+  padding-left: $spacewebsite !important;  
+}
+/*
  .cornicetop {
    display: block;
    position: fixed;
@@ -57,9 +62,8 @@
    z-index: 1039;
    margin-left: $spacewebsite;
    margin-right: $spacewebsite;
-   border-top: 1px solid $color;
  }
-
+*/
  /* fonts */
  p {
    -moz-osx-font-smoothing: grayscale;
@@ -73,6 +77,10 @@
    color: white;
    background-color: black;
  }
+
+ footer.footer { 
+ // border-bottom: 1px solid $color;
+}
 
  /*----------------------------------*/
 

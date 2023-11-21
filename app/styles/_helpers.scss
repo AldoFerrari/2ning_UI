@@ -17,3 +17,8 @@
     }
   } 
   
+
+  .disabled-input {
+    user-select: none; 
+    pointer-events:none;
+  }

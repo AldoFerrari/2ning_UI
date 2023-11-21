@@ -12,6 +12,10 @@
   <input type="date" id="bookdate" min="<?=date('Y-m-d')>" value="<?=date('Y-m-d')>" max="<?=date('Y-m-d', strtotime("+7 day", time()))>" value="<?=date('Y-m-d')>" >
 -->
 
+          <!-- 
+<input type="datetime-local" name="datetime" id="datetime" pattern="\d{4}-\d{2}-\d{2}" />
+-->
+
 <script>
   $(function () {
     var dtToday = new Date();
@@ -56,7 +60,16 @@
       <form class="needs-validation" novalidate>
 
         <h4 class="mb-3"> location & time</h4>
-        <div class="row g-3">
+        <div class="row g-3">  
+
+        <div class="col-12">  <label for="address" class="form-label">Event title</label>
+          <input type="text" class="form-control" id="" placeholder="type the title of your event" required>
+          <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+          <div class="invalid-feedback">
+            Please enter the Title.
+          </div>
+        </div>   
+      
           <div class="col-sm-6">
             <label for="txtDate" class="form-label">starting date</label>
             <input class="form-control" type="date" name="date" id="txtDate" required />
@@ -72,13 +85,6 @@
             </div>
           </div>
 
-
-          <!-- 
-<input type="datetime-local" name="datetime" id="datetime" pattern="\d{4}-\d{2}-\d{2}" />
--->
-
-
-         
      
           <!-- MAPPA ADDRESS scelta -->
           <div class="FindPlaceandPin ">
@@ -87,19 +93,30 @@
                 <div class="dropdown dropsearch dropdown-striped my-2">
                   <label for="basic-url" class="form-label fw-medium">Search address</label>
                   <div class="input-group" data-bs-toggle="dropdown" aria-expanded="false">
-                    <input name="addr" value="" id="addr" class="form-control " placeholder=type an address" " aria-label=" " aria-describedby=" "   > 
-               <button class=" btn btn-outline-secondary" type="button" id="serchManually">Cerca indirizzo</button>
-                  </div>
-                  <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+                      <input name="addr" value="" id="addr" class="form-control " placeholder="search for an address or location" aria-label=" " aria-describedby=" "    > 
+               <button class=" btn btn-outline-secondary rounded-end-2 " type="button" id="serchManually" >Cerca indirizzo</button>
+              
+                </div> 
+           
                   <ul id="results" class="dropdown-menu">
                     <li><span class="dropdown-item-text">Type to search for an address</span></li>
                   </ul>
                 </div>
               </div>
-              <div id="map" class="mb-4 "></div>
+              <div class="col-12 disabled-input">  
+                <label for="address" class="form-label">event location / address:</label>
+                <input type="text" class="form-control" id="finaladdress" placeholder="search above for an address or move the PIN on the map"   required  > 
+                <div class="invalid-feedback">
+                  search above for an address or move the PIN on the map.
+                </div>
+              </div>  
+
+              <div id="map" class="my-4 "></div>
              
-              final address:
-              <div id="finaladdress">. . . </div>
+         
+
+         
+
               <hr class="my-2">
               <div class="row  ">
                 <div class=" col-3"> <label for="lat">Latitudine</label>
@@ -157,7 +174,7 @@
         <h4 class="mb-3"> poster or main image</h4>
         <div class="col-12">
           <label for="address" class="form-label">image (jpg,jpeg,png,bmp) max 500kb</label>
-          <input type="file" class="form-control" id="poster" accept=".jpg,.png,.jpeg,.bmp">
+          <input type="file" class="form-control" id="poster" accept=".jpg,.png,.jpeg,.bmp" required>
           <div class="invalid-feedback">
             Please enter the poster.
           </div>
@@ -168,7 +185,7 @@
         <h4 class="mb-3"> info </h4>
         <div class="col-12">
           <label for="address" class="form-label">Description</label>
-          <textarea type="textarea" class="form-control" id="description" rows="5"></textarea>
+          <textarea type="textarea" class="form-control" id="description" rows="5" required></textarea>
           <div class="invalid-feedback">
             Please enter the description.
           </div>
@@ -176,7 +193,9 @@
  
 
         <hr class="my-4">
+        <div class="sticky-bottom" style="bottom:1.5rem;"  >
         <button class="w-100 btn btn-primary btn-lg" type="submit">submit event for approval</button>
+        </div>
       </form>
     </div>
   </div>
@@ -302,7 +321,7 @@ $("#serchManually").click(function () {
   urla =
     "https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=6&countrycodes=IT&q=" +
     inp;
-  //&countrycodes=IT,FX,BE,ES,CH
+  //&countrycodes=IT,FX,BE,ES,CH,DE,FI,CZ,GB,GR,AT
   //
   $.getJSON(urla, function (data) {
     myFunction(data);
@@ -318,13 +337,13 @@ function addr_search_fromCoord(lat1, lon1) {
     lat +
     "&lon=" +
     lon +
-    "&format=json&namedetails=1";
+    "&format=json&namedetails=1&accept-language=it-IT";
   //&accept-language=it-IT
 
   $.getJSON(urla, function (data) {
     console.log(data);
 
-    $("#finaladdress").html(data.display_name);
+    $("#finaladdress").val(data.display_name);
     $("#country").val(data.address.country);
     $("#village").val(data.address.village); 
     $("#state").val(data.address.state);

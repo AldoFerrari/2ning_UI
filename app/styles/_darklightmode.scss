@@ -1,10 +1,30 @@
  /* dark mode SVG */
-html[data-theme='dark'] svg,
-html[data-bs-theme='dark'] svg {
-  fill: white;
-}
 
-html[data-theme='light'] svg,
-html[data-bs-theme='light'] svg {
-  fill: black;
-}
+
+ html[data-theme='light'],
+ html[data-bs-theme='light'] { 
+   svg {
+     fill: black;
+   }
+ }
+
+
+
+ html[data-theme='dark'],
+ html[data-bs-theme='dark'] {
+   background-color: black;
+
+   svg {
+     fill: white;
+   }
+
+   body { 
+     // background-color: black; 
+     .cornicetop,
+     .cornicebottom { 
+       background-color: black;
+     }
+
+   }
+ }
+ 
