@@ -1,3 +1,163 @@
-<div class=" "> 
-  car content 
+<!-- -----------------ATTIVA BOTTONI FILTRI UI------------------------------ -->
+<div class="container-xxl sticky-top  bg-white mt-2" style="top: 89px">
+  <div class="row mb-2 border-bottom mt-2   ">
+    <div class="col-xs-12 col-md-8">
+      <h1>Your Tuning Garage </h1>
+    </div>
+    <div class="col-xs-12 col-md-4 d-flex align-items-center justify-content-end">
+      <div class=" mb-2">
+
+        <div class="btn-group">
+          <a href="#" id="list" class="btn btn-sm btn-outline-dark " role="button"><i class="bi bi-list-ul"></i>
+            Elenco</a>
+          <a href="#" id="grid" class="btn btn-sm btn-outline-dark" role="button"><i class="bi bi-grid"></i>
+            Griglia</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="container-xxl px-0">
+
+
+  <div class="row">
+   
+   <p> Premium user can add infinite cars, can feature them and partecipate to Tuning Showdown</p>
+
+    <div class="col-md-12" id="cars">
+      <div class="d-flex flex-wrap justify-content-start  ">
+        <!-- cards area -->
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+
+        <!-- CARD 1 -->
+        <div class="card item d-flex mb-2 me-2 flex-fill  ">
+          <div class="card-image-wrapper position-relative overflow-hidden img-2ningauto"
+            style="background-image: url('https://placehold.co/300x200/EEE/31343C?font=pt-sans&text=Car')">
+            <img src="https://placehold.co/300x200/EEE/31343C?font=pt-sans&text=Car" class="card-img-top img-fluid"
+              alt="..." />
+
+             <div class="position-absolute top-0 start-0 m-1">
+              <div class="badge rounded-pill bg-secondary">owner</div> 
+              <div class="badge rounded-pill bg-secondary">r.i.p.</div> 
+              <div class="badge rounded-pill bg-secondary">sold</div>
+            </div>  
+           
+          </div>
+ 
+          <div class="card-body  px-2 pb-2"  > 
+            <h4 class=" card-title  h5 m-0 pb-2">maserati ganturismo s 2009 </h4>
+            <div class="small border-start border-primary ps-2 mb-2"> weekend car </div>
+            <p class="card-text fst-italic small"> <i class="bi-fire"></i> 500 HP </p>
+           <!--   <p class="card-text fst-italic small"> <i class="bi-geo-alt"></i> location </p> -->
+          </div>
+
+          <!-- -->
+          <div class="card-footer d-grid  px-2 pb-2     ">
+
+            <ul class="list-inline m-0">
+              <li class="list-inline-item m-0"> <button class="btn btn-primary btn-sm  " type="button">edit</button></li>
+              <li class="list-inline-item m-0"> <button class="btn btn-danger btn-sm  " type="button">del</button></li>
+              <li class="list-inline-item m-0"> 
+                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="top" data-bs-title="feature this car">
+                <div class="  " data-bs-toggle="modal" data-bs-target="#premiumYouModal"> <i class="bi-star"></i>
+                </div>
+              </button>
+              </li> 
+            </ul> 
+            
+          </div>
+        </div>
+        <!-- end CARD 1 -->
+
+        <!--  
+        <div class="  d-grid item d-flex mb-2 me-2   itema-wrapper  "  style="transform: rotate(0);"  >  
+          <button type="button" class="itema btn btn-primary justify-content-center stretched-link h-100"  
+          data-bs-toggle="modal" data-bs-target="#premiumYouModal">
+            + add a car 
+        </button> -->
+        <div class="  d-grid item d-flex mb-2 me-2   itema-wrapper  "  style="transform: rotate(0);"  >  
+          <button type="button" class="itema btn btn-primary justify-content-center stretched-link h-100">
+            + add a car 
+        </button>
+        </div>
+
+
+        <hr class="my-2">
+
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
+        <!-- cards area -->
+      </div>
+    </div>
+    <!-- -->
+  </div>
+</div>
+
+
+
+
+<script>
+  $(document).ready(function () {
+    // toggle columns and filteres
+    $('#filtri').click(function (event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+      $("#filters").toggleClass("d-none");
+
+      if ($("#filters").hasClass("d-none")) {
+        $("#cars").removeClass().addClass("col-12")
+      } else {
+        $("#cars").removeClass().addClass("col-md-9")
+      }
+    });
+
+    //// toggle MAP
+    $('#ShowMap').click(function (event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+      $("#mappa").toggle(); // Mostra il div con ID "mappa"
+    });
+
+    $('#list').click(function (event) {
+      event.preventDefault();
+      /* */
+      $('#grid').removeClass('active');
+      $('#list').addClass('active');
+      /* */
+      $('#cars .item').removeClass('grid-group-item');
+      $('#cars .item').addClass('list-group-item');
+      $('#cars .item').removeClass('flex-column');
+      $('#cars .item').addClass('flex-row');
+    });
+
+    $('#grid').click(function (event) {
+      event.preventDefault();
+      /* */
+      $('#list').removeClass('active');
+      $('#grid').addClass('active');
+      /* */
+      $('#cars .item').removeClass('list-group-item');
+      $('#cars .item').addClass('grid-group-item');
+      $('#cars .item').removeClass('flex-row');
+      $('#cars .item').addClass('flex-column');
+    });
+
+    $('#grid').click();
+    //$('#list').click();
+    // $('#filtri').click();
+
+    // $('#columnToggle').click();
+
+    $('#ShowMap').click();
+
+  });
+
+
+
+</script>
